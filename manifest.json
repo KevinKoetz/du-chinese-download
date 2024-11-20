@@ -3,9 +3,13 @@
   "description": "Extension to download audio and transcriptions from DuChinese",
   "version": "1.0",
   "manifest_version": 3,
-  "permissions": ["activeTab", "scripting"],
+  "permissions": [
+    "tabs",
+    "downloads"
+  ],
   "background": {
-    "service_worker": "download.js"
+    "service_worker": "background.js"
   },
-  "action": {}
+  "action": {},
+  "host_permissions": ["https://*.duchinese.net/*"]
 }

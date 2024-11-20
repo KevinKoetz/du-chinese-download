@@ -1,0 +1,24 @@
+{
+  "name": "du-chinese-download",
+  "version": "1.0.0",
+  "description": "Extension to download audio and transcriptions from DuChinese",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KevinKoetz/du-chinese-download.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KevinKoetz/du-chinese-download/issues"
+  },
+  "homepage": "https://github.com/KevinKoetz/du-chinese-download#readme",
+  "devDependencies": {
+    "@types/chrome": "^0.0.283"
+  },
+  "dependencies": {
+    "du-chinese-download": "file:"
+  }
+}
