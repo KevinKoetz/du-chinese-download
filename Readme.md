@@ -1,5 +1,5 @@
 Chrome Extension to download the audio file as mp3 and transcription from DuChinese.
-I have to intent to upload this to the Chrome Extension store. If anyone want's to do that, feel free to do so. 
+I have no intent to upload this to the Chrome Extension store. If anyone want's to do that, feel free to do so. 
 
 How to use:
 1. Download repository
