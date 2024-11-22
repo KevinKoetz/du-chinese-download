@@ -53,7 +53,7 @@ async function retrieveLessonData(tab) {
     case "courses":
       lesson = searchResult.lessons.find(
         (l) =>
-          l.course.id.toString() === id &&
+          l.course?.id.toString() === id &&
           chapter !== null &&
           l.course_position === chapter - 1
       );
@@ -74,7 +74,10 @@ async function retrieveLessonData(tab) {
 
 /**
  * @typedef {"courses" | "lessons"} lessonType
- *
+ */
+
+/**
+ * @typedef {curseBasedLesson | standaloneLesson} lesson
  */
 
 /**
@@ -123,7 +126,7 @@ function getLessonIdentifier(tab) {
  */
 
 /**
- * @typedef {object} lesson
+ * @typedef {object} curseBasedLesson
  * @property {string} id
  * @property {string} title
  * @property {string} level
@@ -148,6 +151,34 @@ function getLessonIdentifier(tab) {
  * @property {string} course_type
  * @property {number} course_position
  * @property {course} course
+ */
+
+/**
+ * @typedef {object} standaloneLesson
+ * @property {string} id
+ * @property {string} title
+ * @property {string} level
+ * @property {string} synopsis
+ * @property {null} author
+ * @property {boolean} free
+ * @property {string} large_image_url
+ * @property {string} medium_image_url
+ * @property {string} thumb_image_url
+ * @property {string} release_at_formatted
+ * @property {string} canonical_url
+ * @property {string} path
+ * @property {boolean} locked
+ * @property {string} crd_url
+ * @property {string} audio_url
+ * @property {string} release_at
+ * @property {string} updated_at
+ * @property {boolean} has_course
+ * @property {null} course_title
+ * @property {null} course_group
+ * @property {null} course_path
+ * @property {null} course_type
+ * @property {null} course_position
+ * @property {null} course
  */
 
 /**
