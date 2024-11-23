@@ -2,14 +2,17 @@ chrome.action.onClicked.addListener(async (tab) => {
   const lesson = await retrieveLessonData(tab);
   const transscript = await buildTranscript(lesson);
   const transcriptUrl = `data:text/plain;charset=UTF-8,${transscript}`;
-  chrome.downloads.download({
-    url: transcriptUrl,
-    filename: `${lesson.title}.txt`,
-  });
-  chrome.downloads.download({
-    url: lesson.audio_url,
-    filename: `${lesson.title}.mp3`,
-  });
+  const fileName= lesson.title.replace(/([^a-z0-9\s]+)/gi, '')
+   await chrome.downloads.download({
+      url: transcriptUrl,
+      filename: `${fileName}.txt`,
+    });
+    await chrome.downloads.download({
+      url: lesson.audio_url,
+      filename: `${fileName}.mp3`,
+    });
+
+  
 });
 
 /**
